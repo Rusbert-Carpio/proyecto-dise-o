@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Medicamentos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="background-container">
+        <header>
+            <h1>Gestor de Medicamentos</h1>
+            <p>Tu asistente para mantener tus medicamentos organizados</p>
+        </header>
+        <main>
+            <section class="form-section">
+                <h2>Agrega tus Medicamentos</h2>
+                <form id="medicine-form">
+                    <div class="form-group">
+                        <label for="medicine-name">Nombre del Medicamento</label>
+                        <input type="text" id="medicine-name" placeholder="Ejemplo: Paracetamol" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="schedule-time">Horario</label>
+                        <input type="time" id="schedule-time" required>
+                    </div>
+                    <button type="submit">Agregar Recordatorio</button>
+                </form>
+            </section>
+            <section class="reminders">
+                <h2>Recordatorios</h2>
+                <ul id="reminder-list">
+                    <!-- Los recordatorios actuales aparecerán aquí -->
+                </ul>
+            </section>
+            <section class="history">
+                <h2>Historial</h2>
+                <button id="clear-history" onclick="clearHistory()">Limpiar Historial</button>
+                <ul id="history-list">
+                    <!-- Los recordatorios eliminados aparecerán aquí -->
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
